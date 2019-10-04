@@ -5,7 +5,10 @@ const router = express.Router();
 router.get('/', (req, res) => {
     db.get()
     .then(data => {
-        res.json(data)
+        res.status(200).json(data)
+    })
+    .catch(err => {
+        console.log('Nope', err)
     })
 })
 

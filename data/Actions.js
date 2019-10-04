@@ -2,10 +2,13 @@ const express = require('express');
 const db = require('../data/helpers/actionModel');
 const router = express.Router();
 
+
+
+
 router.get('/', (req, res) => {
     db.get()
     .then(data => {
-        res.status(200).send(data)
+        res.status(200).json({message: `${data}`})
     })
     .catch(err => {
         console.log('Nope', err)
@@ -27,7 +30,10 @@ router.put('/:id', (req, res) => {
     const action = req.params.id
     db.update(action, req.body)
     .then(data => {
-        res.status(200).json({message: "Updated"})
+        if(data){
+        res.status(200).json({message: "Updated"})}else{
+            res.status(400).json({message: "That is not even a thing."})
+        }
     })
     .catch(err => {
 
