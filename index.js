@@ -16,14 +16,14 @@ Go code!
 const express = require('express');
 
 const ProjectRouter = require('./data/ProjectRouter');
-// const ActionRouter = ('./data/Actions');
+const ActionRouter = require('./data/Actions');
 
 const server = express();
 
 server.use(express.json());
 
 server.use('/api/project', ProjectRouter);
-// server.use('/api/Actions', ActionRouter);
+server.use('/api/Actions', ActionRouter);
 
 server.get('/', (req, res) => { 
     res.send(`
