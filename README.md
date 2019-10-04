@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Sending an html file or an image over the server can be done with Express. Express is a minimal and flexibla Node.js web application framework that provides a robust set of features for web and mobile applications.
+
 - [ ] Describe Middleware?
+
+Middleware is a function that has access to the request object and the response object as well as the next function in the applications request-response cycle.
 
 - [ ] Describe a Resource?
 
+An HTTP response.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+2xx - Success - Indicates that the client's request was accepted successfully.
+
 - [ ] How can we partition our application into sub-applications?
+
+Express Routers are a way to split an application into sub-apps to make it more modular and easier to maintain and reason about.
 
 ## Project Setup
 
